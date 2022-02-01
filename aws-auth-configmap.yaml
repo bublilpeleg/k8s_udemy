@@ -1,0 +1,17 @@
+apiVersion: v1
+data:
+  mapRoles: |
+    - groups:
+      - system:bootstrappers
+      - system:nodes
+      rolearn: arn:aws:iam::606384754396:role/eksctl-EKS-course-cluster-nodegro-NodeInstanceRole-1K7O53JN769BH
+      username: system:node:{{EC2PrivateDNSName}}
+  mapUsers: |
+    []
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2022-01-19T10:38:35Z"
+  name: aws-auth
+  namespace: kube-system
+  resourceVersion: "43128"
+  uid: ec7d8c62-3abe-4d0f-8d04-de8354d72f92
